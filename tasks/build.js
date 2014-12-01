@@ -150,6 +150,12 @@ gulp.task('less-watch', lessTask);
 gulp.task('watch', function () {
     gulp.watch('app/stylesheets/**', ['less-watch']);
     gulp.watch(paths.jsCode, ['transpile-watch']);
+    gulp.watch('app/index.html', function () {
+        return projectDir.copyAsync('app', destForCodeDir.path(), {
+            overwrite: true,
+            only: [ '*.html' ]
+        });
+    });
 });
 
 gulp.task('build', ['copy', 'finalize', 'transpile', 'less']);

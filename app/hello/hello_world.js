@@ -1,3 +1,3 @@
 export var greet = function () {
-    return 'Hello World!';
+    return 'Hello Beeping Farking World!';
 };

@@ -1,9 +1,8 @@
-node_modules
-bower_components
-*.log
 .DS_Store
-Thumbs.db
-/build/
-/releases/
-/nw/
-/tmp/
+node_modules
+*.sw[po]
+xfers
+config.json
+*.pem
+nw/*
+build/*

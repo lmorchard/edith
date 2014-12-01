@@ -1,21 +1,29 @@
 {
-    "name": "nw-boilerplate",
-    "prettyName": "Node-Webkit Boilerplate",
-    "description": "Scaffolding for node-webkit application. Out of the box ready for serious stuff.",
+    "name": "EdiTH",
+    "prettyName": "EVE Trade Helper",
+    "description": "A helper for calculations during market trading",
     "version": "0.1.0",
-    "author": "Mr Gumby <gumby@sillywalks.com>",
+    "author": "Les Orchard <me@lmorchard.com>",
     "main": "index.html",
     "window": {
         "icon": "icon.png",
         "show": true,
         "toolbar": true,
-        "width": 1000,
-        "height": 600,
-        "min_width": 800,
-        "min_height": 400,
-        "position": "center"
+        "width": 400,
+        "height": 300,
+        "min_width": 400,
+        "min_height": 300,
+        "position": "center",
+        "always-on-top": true
     },
     "dependencies": {
-        
+        "bootstrap": "^3.3.1",
+        "bootswatch": "^3.3.0",
+        "csv": "^0.4.1",
+        "jquery": "^2.1.1",
+        "lodash": "^2.4.1",
+        "nedb": "^0.11.1",
+        "neow": "^1.0.0",
+        "q": "^1.1.2"
     }
 }
