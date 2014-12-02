@@ -6,3 +6,4 @@ config.json
 *.pem
 nw/*
 build/*
+npm-debug.log
