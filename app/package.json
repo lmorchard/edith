@@ -9,10 +9,10 @@
         "icon": "icon.png",
         "show": true,
         "toolbar": true,
-        "width": 400,
-        "height": 300,
+        "width": 700,
+        "height": 550,
         "min_width": 400,
-        "min_height": 300,
+        "min_height": 110,
         "position": "center",
         "always-on-top": true
     },
