@@ -19,14 +19,22 @@ var handleLogChange = _.debounce(function (filename) {
   fs.createReadStream(fn).pipe(parser);
 }, 300);
 
-var LOGS_PATH = getUserHome() + '/Documents/EVE/logs/Marketlogs';
+var LOGS_PATH;
+
+if (process.platform == 'win32') {
+  LOGS_PATH = getUserHome() + '/Documents/EVE/logs/Marketlogs';
+} else {
+  LOGS_PATH = '/Users/lmorchard/Library/Application Support/EVE Online/p_drive/User/My Documents/EVE/logs/Marketlogs/';
+}
+
 fs.watch(LOGS_PATH, function (event, filename) {
   if ('change' == event) {
     handleLogChange(filename);
   }
 });
 
-if (DEBUG) handleLogChange('Catch-Adaptive Invulnerability Field II-2014.11.30 230738.txt');
+//if (DEBUG) handleLogChange('Catch-Adaptive Invulnerability Field II-2014.11.30 230738.txt');
+if (DEBUG) handleLogChange('Catch-Adaptive Invulnerability Field II-2014.12.02 230340.txt');
 
 function normalizeExportRow (row) {
   row.bid = (row.bid === 'True');
